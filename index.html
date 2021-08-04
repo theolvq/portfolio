@@ -7,7 +7,118 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="nav-container">
+      <nav class="nav nav--hidden" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about">About</a></li>
+          <li class="nav__item"><a href="#projects">Projects</a></li>
+          <li class="nav__item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        class="hamburger"
+        id="hamburger"
+      >
+        <path
+          fill="hsl(60, 30%, 96%)"
+          d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
+        />
+      </svg>
+    </header>
+    <main>
+      <header id="top">
+        <h1 class="title">
+          Hello, I am Theo, <br />
+          a web developper
+        </h1>
+      </header>
+      <section id="about">
+        <h2>About me</h2>
+        <p>
+          I have always loved to tinker with computers. I started my programming
+          journey just before my 30th birthday as it was a dream of mine for
+          years. I absolutely fell in love with coding and have learnt a lot
+          with various ressources such as free code camp, the odin project and
+          full stack open.
+        </p>
+        <p>
+          I am also a skier, trail runner and mountain lover but most
+          importantly a father and partner. I live in beautiful British
+          Columbia, in the amazing resort town of Whistler where I can pursue my
+          passions.
+        </p>
+      </section>
+      <section id="projects">
+        <h2>My work</h2>
+        <p>
+          You can visit
+          <a href="https://github.com/daawascript" target="_blank">my github</a>
+          to see all the projects I have worked on. Following are the ones I am
+          most proud of.
+        </p>
+        <div>
+          <div>
+            <h3>Project 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae esse aliquid consequatur molestias odio illum quam
+              cupiditate? Et, nulla unde?
+            </p>
+            <img src="" alt="project screenshot" />
+            <p>
+              <a href="http://" target="_blank" rel="noopener noreferrer"
+                >Code</a
+              ><a href="http://" target="_blank" rel="noopener noreferrer"
+                >Live Preview</a
+              >
+            </p>
+          </div>
+          <div>
+            <h3>Project 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repudiandae esse aliquid consequatur molestias odio illum quam
+              cupiditate? Et, nulla unde?
+            </p>
+            <img src="" alt="project screenshot" />
+            <div>
+              <span>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  >Code</a
+                >
+              </span>
+              <span>
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  >Live Preview</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Shoot me a message!</h2>
+        <form action="submit">
+          <label for="name">Your Name </label
+          ><input type="text" placeholder="Name" />
+          <label for="email"
+            >Your email <input type="email" placeholder="Email address"
+          /></label>
+          <label for="message">
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </label>
+        </form>
+      </section>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

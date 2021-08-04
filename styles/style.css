@@ -1,0 +1,25 @@
+.nav-container {
+  display: flex;
+}
+
+.nav {
+  position: relative;
+}
+
+.nav--hidden {
+  display: none;
+}
+
+.nav__list {
+  position: absolute;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  gap: 1em;
+}
+
+.hamburger {
+  margin: 1em;
+}
