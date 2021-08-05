@@ -34,11 +34,20 @@ ol {
   padding: 0;
 }
 
+h1,
+h2,
+h3 {
+  color: var(--pink);
+}
+
 body {
-  line-height: 1.5;
   margin: 0;
   background-color: var(--bg-primary);
   color: var(--white);
+}
+
+p {
+  line-height: 1.5;
 }
 
 main {

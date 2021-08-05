@@ -4,33 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="nav-container">
-      <nav class="nav nav--hidden" id="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#about">About</a></li>
-          <li class="nav__item"><a href="#projects">Projects</a></li>
-          <li class="nav__item"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        class="hamburger"
-        id="hamburger"
-      >
-        <path
-          fill="hsl(60, 30%, 96%)"
-          d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"
-        />
-      </svg>
+    <header>
+      <div class="nav-container">
+        <nav
+          class="nav--hidden nav animate__animated animate__fadeOutLeft"
+          id="nav"
+        >
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#about">About</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
+            <li class="nav__item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburger-container">
+        <span class="material-icons hamburger" id="hamburger"> menu </span>
+      </div>
     </header>
     <main>
-      <header id="top">
+      <header class="top" id="top">
         <h1 class="title">
           Hello, I am Theo, <br />
           a web developper
