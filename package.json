@@ -10,6 +10,8 @@
     "vite": "^2.4.4"
   },
   "dependencies": {
-    "@csstools/normalize.css": "^11.0.1"
+    "@csstools/normalize.css": "^11.0.1",
+    "animate.css": "^4.1.1",
+    "tsparticles": "^1.33.2"
   }
 }

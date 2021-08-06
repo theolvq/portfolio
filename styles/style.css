@@ -1,3 +1,7 @@
+.nav-header {
+  position: absolute;
+}
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -25,10 +29,10 @@
   cursor: pointer;
   font-size: 2rem;
   user-select: none;
+  transition: 1s;
 }
 
 .hamburger-container {
-  max-width: max-content;
   line-height: 0;
   padding: 1em;
   border-radius: 100%;
@@ -39,13 +43,23 @@
   background-color: var(--grey);
 }
 
-.top {
+.top-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.top {
+  min-height: 100vh;
+}
+
 .title {
   text-align: center;
+}
+
+.tsparticles {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 }
