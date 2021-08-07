@@ -4,5 +4,6 @@ import '@csstools/normalize.css';
 import 'animate.css';
 import { tsParticles } from 'tsparticles';
 import toggleNav from './js/nav';
+// import scroll from './js/scroll';
 
 tsParticles.loadJSON('tsparticles', 'particles.json').then((container) => {});

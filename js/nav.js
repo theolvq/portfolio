@@ -10,8 +10,8 @@ const toggleNav = (() => {
     } else if (hamburger.textContent.trim() === 'close') {
       hamburger.textContent = 'menu';
     }
-    nav.classList.toggle('animate__fadeOutLeft');
-    nav.classList.toggle('animate__fadeInLeft');
+    nav.classList.toggle('animate__fadeOutRight');
+    nav.classList.toggle('animate__fadeInRight');
   };
 
   hamburger.addEventListener('click', toggle);

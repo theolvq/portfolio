@@ -16,6 +16,10 @@
   --purple: hsl(265, 89%, 78%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul,
 ol {
   list-style: none;
