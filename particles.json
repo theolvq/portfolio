@@ -1,4 +1,25 @@
 {
+  "interactivity": {
+    "events": {
+      "onHover": {
+        "enable": true,
+        "mode": ["connect", "slow"]
+      }
+    },
+    "mode": {
+      "connect": {
+        "distance": 200,
+        "radius": 10,
+        "links": {
+          "opacity": 0.65
+        }
+      },
+      "slow": {
+        "factor": 3,
+        "radius": 200
+      }
+    }
+  },
   "particles": {
     "move": {
       "enable": true
@@ -24,6 +45,13 @@
       "value": {
         "min": 1,
         "max": 5
+      }
+    },
+    "number": {
+      "density": {
+        "enable": true,
+        "area": 800,
+        "factor": 900
       }
     }
   }
