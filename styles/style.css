@@ -106,3 +106,7 @@
 .projects {
   min-height: 100vh;
 }
+
+body {
+  transition: 1s;
+}
