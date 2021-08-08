@@ -2,16 +2,19 @@ const toggleNav = (() => {
   const hamburger = document.querySelector('#hamburger');
   const nav = document.querySelector('#nav');
   const toggle = () => {
-    if (nav.classList.contains('nav--hidden')) {
-      nav.classList.remove('nav--hidden');
-    }
     if (hamburger.textContent.trim() == 'menu') {
+      nav.classList.add('animate__fadeInRight');
+      nav.classList.remove('animate__fadeOutRight');
       hamburger.textContent = 'close';
+      nav.style.visibility = 'visible';
+      nav.style.opacity = 1;
     } else if (hamburger.textContent.trim() === 'close') {
+      nav.classList.add('animate__fadeOutRight');
+      nav.classList.remove('animate__fadeInRight');
       hamburger.textContent = 'menu';
+      nav.style.visibility = 'hidden';
+      nav.style.opacity = 0;
     }
-    nav.classList.toggle('animate__fadeOutRight');
-    nav.classList.toggle('animate__fadeInRight');
   };
 
   hamburger.addEventListener('click', toggle);
