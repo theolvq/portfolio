@@ -1,7 +1,26 @@
-.nav-header {
+@import url('./base.less');
+
+// Mixins
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col-center {
+  .flex-col();
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute-right {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+// Nav Styles
+.nav-header {
+  .absolute-right();
   height: 100vh;
   min-width: max-content;
 }
@@ -9,26 +28,21 @@
 .nav-container {
   position: fixed;
   top: 0;
-  /* width: 100%; */
 }
-
 .nav {
+  .absolute-right();
   visibility: hidden;
   opacity: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
   min-height: 100vh;
   padding: 5rem 1.5rem;
   min-width: max-content;
   font-size: 1.75rem;
-  background-color: var(--purple);
+  background-color: @purple;
   transition: visibility 500ms;
 }
 
 .nav__list {
-  display: flex;
-  flex-direction: column;
+  .flex-col();
   justify-content: center;
   align-items: flex-start;
   margin: 0;
@@ -36,29 +50,25 @@
 }
 
 .hamburger {
-  /* position: sticky; */
-  top: 0;
   cursor: pointer;
   font-size: 2rem;
   user-select: none;
 }
 
 .hamburger-container {
-  position: absolute;
-  top: 0;
-  right: 0;
+  .absolute-right();
   line-height: 0;
   padding: 1em;
   border-radius: 100%;
   z-index: 3;
+
+  &:hover {
+    background-color: @grey;
+    transition: 0.5s ease;
+  }
 }
 
-.hamburger-container:hover {
-  background-color: var(--grey);
-  opacity: 0.5;
-  transition: 0.5s ease;
-}
-
+// Top section styles
 .top-container {
   min-height: 100vh;
   display: flex;
@@ -72,7 +82,7 @@
 
 .title {
   text-align: center;
-  color: var(--white);
+  color: @white;
 }
 
 .tsparticles {
@@ -80,6 +90,8 @@
   width: 100%;
   height: 100%;
 }
+
+// about section styles
 
 .about {
   min-height: 100vh;
@@ -99,14 +111,24 @@
   gap: 2rem;
 }
 
-.contact {
-  min-height: 100vh;
-}
-
+// project section styles
 .projects {
   min-height: 100vh;
 }
 
-body {
-  transition: 1s;
+// contact section styles
+.contact {
+  text-align: center;
+  min-height: 100vh;
+  .flex-col-center();
+}
+
+.contact-form {
+  .flex-col-center();
+  gap: 1.5rem;
+}
+
+.form-item {
+  .flex-col();
+  gap: 0.25rem;
 }
