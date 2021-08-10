@@ -4,6 +4,7 @@
 @white: hsl(60, 30%, 96%);
 @hover-white: hsla(60, 30%, 96%, 0.75);
 @cyan: hsl(191, 97%, 77%);
+@hover-cyan: hsla(191, 97%, 77%, 0.75);
 @green: hsl(135, 94%, 65%);
 @hover-green: hsl(135, 75%, 45%);
 @orange: hsl(31, 100%, 71%);
@@ -64,10 +65,19 @@ main {
 
 a {
   text-decoration: none;
-  color: @green;
+  color: @cyan;
   transition: 0.2s ease;
   &:hover {
-    color: @hover-green;
+    color: @hover-cyan;
     text-shadow: 0.1em 0.1em 0.75em @shadow-grey;
+  }
+}
+
+@media (max-width: 600px) {
+  .top,
+  .about,
+  .projects,
+  .contact {
+    padding: 0 2em;
   }
 }
