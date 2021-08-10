@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -12,13 +18,14 @@
   </head>
   <body>
     <div class="tsparticles" id="tsparticles"></div>
-    <header class="nav-header">
-      <div class="nav-container">
-        <div class="hamburger-container">
+    <header class="nav--header">
+      <div class="nav--container">
+        <div class="hamburger--container">
           <span class="material-icons hamburger" id="hamburger"> menu </span>
         </div>
         <nav class="nav animate__animated" id="nav">
           <ul class="nav__list">
+            <li class="nav__item"><a href="#top">Home</a></li>
             <li class="nav__item"><a href="#about">About</a></li>
             <li class="nav__item"><a href="#projects">Projects</a></li>
             <li class="nav__item"><a href="#contact">Contact</a></li>
@@ -28,12 +35,10 @@
     </header>
     <main>
       <header class="top" id="top">
-        <div class="top-container">
-          <h1 class="title animate__animated animate__bounceInDown">
-            Hello, I am Theo, <br />
-            a web developer
-          </h1>
-        </div>
+        <h1 class="title animate__animated animate__bounceInDown">
+          Hello, I am Theo, <br />
+          a web developer
+        </h1>
       </header>
       <section class="about" id="about">
         <div class="grid-container">
@@ -45,74 +50,75 @@
             learnt a lot with various resources such as free code camp, the odin
             project and full stack open.
           </p>
-          <!-- <p>
+          <p>
             I am also a skier, trail runner and mountain lover but most
             importantly a father and partner. I live in beautiful British
             Columbia, in the amazing resort town of Whistler where I can pursue
             my passions.
-          </p> -->
+          </p>
         </div>
       </section>
       <section class="projects" id="projects">
-        <h2>My work</h2>
-        <p>
-          You can visit
-          <a href="https://github.com/daawascript" target="_blank">my github</a>
-          to see all the projects I have worked on. Following are the ones I am
-          most proud of.
-        </p>
-        <div>
+        <div class="projects--title">
+          <h2>My work</h2>
+          <p>
+            You can visit
+            <a href="https://github.com/daawascript" target="_blank"
+              >my github</a
+            >
+            to see all the projects I have worked on. Following are the ones I
+            am most proud of.
+          </p>
+        </div>
+        <div class="projects--item">
+          <h3>Project 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            esse aliquid consequatur molestias odio illum quam cupiditate? Et,
+            nulla unde?
+          </p>
+          <img src="" alt="project screenshot" />
+          <p>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Code</a
+            ><a href="http://" target="_blank" rel="noopener noreferrer"
+              >Live Preview</a
+            >
+          </p>
+        </div>
+        <div class="projects--item">
+          <h3>Project 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            esse aliquid consequatur molestias odio illum quam cupiditate? Et,
+            nulla unde?
+          </p>
+          <img src="" alt="project screenshot" />
           <div>
-            <h3>Project 1</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae esse aliquid consequatur molestias odio illum quam
-              cupiditate? Et, nulla unde?
-            </p>
-            <img src="" alt="project screenshot" />
-            <p>
+            <span>
               <a href="http://" target="_blank" rel="noopener noreferrer"
                 >Code</a
-              ><a href="http://" target="_blank" rel="noopener noreferrer"
+              >
+            </span>
+            <span>
+              <a href="http://" target="_blank" rel="noopener noreferrer"
                 >Live Preview</a
               >
-            </p>
-          </div>
-          <div>
-            <h3>Project 2</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae esse aliquid consequatur molestias odio illum quam
-              cupiditate? Et, nulla unde?
-            </p>
-            <img src="" alt="project screenshot" />
-            <div>
-              <span>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >Code</a
-                >
-              </span>
-              <span>
-                <a href="http://" target="_blank" rel="noopener noreferrer"
-                  >Live Preview</a
-                >
-              </span>
-            </div>
+            </span>
           </div>
         </div>
       </section>
       <section class="contact" id="contact">
         <h2>Let's chat!</h2>
-        <form class="contact-form" action="submit">
-          <div class="contact-form-item">
+        <form class="contact--form" action="submit">
+          <div class="contact--form--item">
             <label for="name">Your Name </label
             ><input type="text" placeholder="Name" />
           </div>
-          <div class="contact-form-item">
+          <div class="contact--form--item">
             <label for="email">Your email </label
             ><input type="email" placeholder="Email address" />
           </div>
-          <div class="contact-form-item">
+          <div class="contact--form--item">
             <label for="message"> Your message </label>
             <textarea
               name="message"

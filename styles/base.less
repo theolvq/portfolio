@@ -1,9 +1,11 @@
 @bg-primary: hsl(231, 15%, 18%);
 @grey: hsl(232, 14%, 31%);
+@shadow-grey: hsla(232, 14%, 5%, 0.5);
 @white: hsl(60, 30%, 96%);
+@hover-white: hsla(60, 30%, 96%, 0.75);
 @cyan: hsl(191, 97%, 77%);
 @green: hsl(135, 94%, 65%);
-@green-hover: hsl(135, 75%, 50%);
+@hover-green: hsl(135, 75%, 45%);
 @orange: hsl(31, 100%, 71%);
 @pink: hsl(326, 100%, 74%);
 @purple: hsl(265, 89%, 78%);
@@ -36,13 +38,13 @@ ol {
   padding: 0;
 }
 
-h1,
 h2,
 h3 {
   color: @pink;
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background-color: @bg-primary;
   color: @white;
@@ -63,7 +65,9 @@ main {
 a {
   text-decoration: none;
   color: @green;
+  transition: 0.2s ease;
   &:hover {
-    color: @green-hover;
+    color: @hover-green;
+    text-shadow: 0.1em 0.1em 0.75em @shadow-grey;
   }
 }

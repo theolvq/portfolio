@@ -25,13 +25,13 @@
 }
 
 // Nav Styles
-.nav-header {
+.nav--header {
   .absolute-right();
   height: 100vh;
   min-width: max-content;
 }
 
-.nav-container {
+.nav--container {
   position: fixed;
   top: 0;
 }
@@ -42,8 +42,11 @@
   min-height: 100vh;
   padding: 5rem 1.5rem;
   min-width: max-content;
-  font-size: 1.75rem;
-  background-color: @purple;
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-weight: 600;
+  background-color: @grey;
+  box-shadow: -0.125em 0 0.75em 0.25em @shadow-grey;
   transition: visibility 500ms;
   &__list {
     .flex-col();
@@ -58,30 +61,36 @@
   cursor: pointer;
   font-size: 2rem;
   user-select: none;
-  &-container {
+  &:hover {
+    color: @hover-white;
+  }
+  &--container {
     .absolute-right();
     line-height: 0;
     padding: 1em;
     border-radius: 100%;
     z-index: 3;
+    transition: 0.5s ease;
 
     &:hover {
-      background-color: @grey;
-      transition: 0.5s ease;
+      background-color: @shadow-grey;
     }
   }
 }
 
 // Top section styles
 
-.top-container {
+.top {
   min-height: 100vh;
   .flex-center();
 }
 
 .title {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-weight: 600;
   text-align: center;
-  color: @white;
 }
 
 .tsparticles {
@@ -112,6 +121,14 @@
 // project section styles
 .projects {
   min-height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(min-content, 8rem) 1fr;
+
+  &--title {
+    grid-column: span 2;
+  }
 }
 
 // contact section styles
@@ -119,10 +136,10 @@
   text-align: center;
   min-height: 100vh;
   .flex-col-center();
-  &-form {
+  &--form {
     .flex-col-center();
     gap: 1.5rem;
-    &-item {
+    &--item {
       .flex-col();
       gap: 0.25rem;
     }
