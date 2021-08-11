@@ -18,17 +18,17 @@
   </head>
   <body>
     <div class="tsparticles" id="tsparticles"></div>
-    <header class="nav--header">
+    <header class="nav">
+      <div class="hamburger--container">
+        <span class="material-icons hamburger" id="hamburger"> menu </span>
+      </div>
       <div class="nav--container">
-        <div class="hamburger--container">
-          <span class="material-icons hamburger" id="hamburger"> menu </span>
-        </div>
-        <nav class="nav animate__animated" id="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#top">Home</a></li>
-            <li class="nav__item"><a href="#about">About</a></li>
-            <li class="nav__item"><a href="#projects">Projects</a></li>
-            <li class="nav__item"><a href="#contact">Contact</a></li>
+        <nav class="nav--main animate__animated" id="nav">
+          <ul class="nav--main__list">
+            <li class="nav--main__item"><a href="#top">Home</a></li>
+            <li class="nav--main__item"><a href="#about">About</a></li>
+            <li class="nav--main__item"><a href="#projects">Projects</a></li>
+            <li class="nav--main__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -37,7 +37,7 @@
       <header class="top" id="top">
         <h1 class="title animate__animated animate__bounceInDown">
           Hello, I am Théo, <br />
-          a web developer
+          a web developer.
         </h1>
       </header>
       <section class="about" id="about">
@@ -59,50 +59,81 @@
         </div>
       </section>
       <section class="projects" id="projects">
-        <div class="projects--title">
-          <h2>My work</h2>
-          <p>
-            You can visit
-            <a href="https://github.com/daawascript" target="_blank"
-              >my github</a
-            >
-            to see all the projects I have worked on. Following are the ones I
-            am most proud of.
-          </p>
-        </div>
-        <div class="projects--item">
-          <h3>Project 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            esse aliquid consequatur molestias odio illum quam cupiditate? Et,
-            nulla unde?
-          </p>
-          <img src="" alt="project screenshot" />
-          <p>
-            <a href="http://" target="_blank" rel="noopener noreferrer">Code</a
-            ><a href="http://" target="_blank" rel="noopener noreferrer"
-              >Live Preview</a
-            >
-          </p>
-        </div>
-        <div class="projects--item">
-          <h3>Project 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            esse aliquid consequatur molestias odio illum quam cupiditate? Et,
-            nulla unde?
-          </p>
-          <img src="" alt="project screenshot" />
-          <div>
+        <div class="projects--container">
+          <div class="projects--title">
+            <h2>My work</h2>
+            <p>
+              You can visit
+              <a href="https://github.com/daawascript" target="_blank"
+                >my github</a
+              >
+              to see all the projects I have worked on. Following are the ones I
+              put up online. If you are interested in my problem solving skills,
+              you should check out t<a
+                href="https://github.com/daawascript/exercism"
+                target="_blank"
+                >his repo</a
+              >
+              in which I solve coding challenges from
+              <a href="https://exercism.io/profiles/daawascript" target="_blank"
+                >exercism.io</a
+              >.
+            </p>
+          </div>
+          <div class="projects--item">
+            <h3>Weather app</h3>
+            <div>
+              <p>
+                A simple weather app built with React and Tailwind css, using
+                the open weather api. I picked those tools as React is pretty
+                neat for creating modular components while keeping the source
+                code maintanable and scalable. As for Tailwind, it is a very
+                easy way to style applications without managing complex and hard
+                to maintain stylesheets.
+              </p>
+            </div>
+            <img src="./img/weather-app.webp" alt="project screenshot" />
             <span>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+              <a
+                href="https://github.com/daawascript/weather-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              ></span
+            >
+            <span
+              ><a
+                href="https://portfolio-apps-88864.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live Preview</a
+              >
+            </span>
+          </div>
+          <div class="projects--item">
+            <h3>My personal website</h3>
+            <img src="./img/portfolio.webp" alt="project screenshot" />
+
+            <p>
+              This is the very site you are on! I picked a more traditional
+              route this time with HTML, SASS, vanilla JavaScript and Vite. HTML
+              is tried and tested and I did not feel the need for React. Sass is
+              incredibly helpful and had all the features I need for this
+              project. I picked Vite as a bundler because of the little overhead
+              it has and how fast it is, it was a real pleasure to use. I am
+              also using Animate.css for a couple animation as well as
+              TSParticles, two pretty awesome libraries!
+            </p>
+            <span>
+              <a
+                href="https://github.com/daawascript/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Code</a
               >
             </span>
             <span>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
-                >Live Preview</a
-              >
+              <a href="#top" rel="noopener noreferrer">Live Preview</a>
             </span>
           </div>
         </div>
