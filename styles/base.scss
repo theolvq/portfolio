@@ -1,0 +1,79 @@
+$bg-primary: hsl(231, 15%, 18%);
+$grey: hsl(232, 14%, 31%);
+$shadow-grey: hsla(232, 14%, 5%, 0.5);
+$white: hsl(60, 30%, 96%);
+$hover-white: hsla(60, 30%, 96%, 0.75);
+$cyan: hsl(191, 97%, 77%);
+$hover-cyan: hsla(191, 97%, 77%, 0.75);
+$pink: hsl(326, 100%, 74%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  color: $pink;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: $bg-primary;
+  color: $white;
+  /* width: 100%; */
+  /* height: 100%; */
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.5;
+}
+
+main {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $cyan;
+  transition: 0.2s ease;
+  &:hover {
+    color: $hover-cyan;
+    text-shadow: 0.1em 0.1em 0.75em $shadow-grey;
+  }
+}
+
+@media (max-width: 760px) {
+  .top,
+  .about,
+  .projects,
+  .contact {
+    padding: 0 2em;
+  }
+}

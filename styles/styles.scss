@@ -1,24 +1,26 @@
-@import url('./base.less');
+$grey: hsl(232, 14%, 31%);
+$shadow-grey: hsla(232, 14%, 5%, 0.5);
+$hover-white: hsla(60, 30%, 96%, 0.75);
 
 // Mixins
-.flex-col {
+@mixin flex-col {
   display: flex;
   flex-direction: column;
 }
 
-.flex-col-center {
-  .flex-col();
+@mixin flex-col-center {
+  @include flex-col;
   justify-content: center;
   align-items: center;
 }
 
-.flex-center {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.absolute-right {
+@mixin absolute-right {
   position: absolute;
   top: 0;
   right: 0;
@@ -26,7 +28,7 @@
 
 // Nav Styles
 .nav--header {
-  .absolute-right();
+  @include absolute-right;
   height: 100vh;
   min-width: max-content;
 }
@@ -36,7 +38,7 @@
   top: 0;
 }
 .nav {
-  .absolute-right();
+  @include absolute-right;
   visibility: hidden;
   opacity: 0;
   min-height: 100vh;
@@ -45,11 +47,11 @@
   font-size: 1.75rem;
   font-variant: small-caps;
   font-weight: 600;
-  background-color: @grey;
-  box-shadow: -0.125em 0 0.75em 0.25em @shadow-grey;
+  background-color: $grey;
+  box-shadow: -0.125em 0 0.75em 0.25em $shadow-grey;
   transition: visibility 500ms;
   &__list {
-    .flex-col();
+    @include flex-col;
     justify-content: center;
     align-items: flex-start;
     margin: 0;
@@ -63,7 +65,7 @@
   user-select: none;
 
   &--container {
-    .absolute-right();
+    @include absolute-right;
     line-height: 0;
     padding: 1em;
     border-radius: 100%;
@@ -71,8 +73,8 @@
     transition: 0.5s ease;
 
     &:hover {
-      background-color: @shadow-grey;
-      color: @hover-white;
+      background-color: $shadow-grey;
+      color: $hover-white;
     }
   }
 }
@@ -81,7 +83,8 @@
 
 .top {
   min-height: 100vh;
-  .flex-center();
+  @include flex-center;
+  font-size: clamp;
 }
 
 .title {
@@ -102,14 +105,14 @@
 
 .about {
   min-height: 100vh;
-  .flex-col-center();
+  @include flex-col-center;
 }
 
 @media (min-width: 600px) {
-  .about {
+  .about--container {
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(5em, min-content) min-content;
     gap: 2rem;
   }
 }
@@ -117,13 +120,6 @@
 .subtitle {
   grid-column: span 2;
   text-align: center;
-}
-
-.about--container {
-  display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
-  gap: 2rem;
 }
 
 // project section styles
@@ -148,12 +144,12 @@
 .contact {
   text-align: center;
   min-height: 100vh;
-  .flex-col-center();
+  @include flex-col-center;
   &--form {
-    .flex-col-center();
+    @include flex-col-center;
     gap: 1.5rem;
     &--item {
-      .flex-col();
+      @include flex-col;
       gap: 0.25rem;
     }
   }

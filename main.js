@@ -1,4 +1,5 @@
-import './styles/styles.less';
+import './styles/styles.scss';
+import './styles/base.scss';
 import '@csstools/normalize.css';
 import 'animate.css';
 import { tsParticles } from 'tsparticles';
