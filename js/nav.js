@@ -1,6 +1,8 @@
 const toggleNav = (() => {
   const hamburger = document.querySelector('#hamburger');
   const nav = document.querySelector('#nav');
+  const title = document.querySelector('#title');
+
   const toggle = () => {
     if (hamburger.textContent.trim() == 'menu') {
       nav.classList.add('animate__fadeInLeft');

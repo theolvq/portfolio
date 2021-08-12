@@ -31,7 +31,7 @@
   padding: 2em 3em;
   margin-bottom: 3em;
   border-radius: 1em;
-  box-shadow: 0.175em 0.175em 1em 0.25em $shadow-grey;
+  box-shadow: 0.125em 0.125em 0.5em 0.25em $shadow-grey;
   backdrop-filter: blur(0.25em);
 }
 
@@ -57,10 +57,10 @@
     font-size: 1.75rem;
     font-variant: small-caps;
     font-weight: 600;
-    background-color: $clear-grey;
+    background-color: $shadow-grey;
     backdrop-filter: blur(0.25em);
 
-    box-shadow: 0.175em 0 0.75em 0.25em $shadow-grey;
+    box-shadow: 0.125em 0 0.5em 0.25em $shadow-grey;
     transition: visibility 500ms;
     &__list {
       @include flex-col;
@@ -83,7 +83,7 @@
   transition: 0.5s ease;
 
   &:hover {
-    background-color: $shadow-grey;
+    background-color: $clear-grey;
     color: $hover-white;
   }
 }
@@ -102,6 +102,7 @@
 }
 
 .title {
+  color: $white;
   font-size: clamp(1.75rem, 0.4375rem + 5.8333vw, 3.5rem);
   line-height: 1;
   font-weight: 600;
