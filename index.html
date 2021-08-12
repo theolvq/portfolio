@@ -41,35 +41,35 @@
         </h1>
       </header>
       <section class="about" id="about">
-        <div class="about--container">
+        <div class="about--container card">
           <h2 class="subtitle">About me</h2>
           <p>
-            I have always loved to tinker with computers. I started my
-            programming journey just before my 30th birthday as it was a dream
-            of mine for years. I absolutely fell in love with coding and have
-            learnt a lot with various resources such as free code camp, the odin
-            project and full stack open.
+            I have always loved to tinker with computers. I am a selft-taught
+            developer, my main languages are HTML, CSS and Javascript. I feel
+            comfortable using React, Redux, Node, Express, Webpack, Parcel,Vite,
+            Jest, Cypress, Sass, Less, Tailwind Css, Material-UI. I have dabbled
+            with GraphQL, Typescript, Svelte, Vue, and other Tech. I am a
+            lifelong learner and can't wait to discover more awesome stuff!
           </p>
           <p>
             I am also a skier, trail runner and mountain lover but most
             importantly a father and partner. I live in beautiful British
-            Columbia, in the amazing resort town of Whistler where I can pursue
-            my passions.
+            Columbia, in the amazing resort town of Whistler where I can play
+            outside all year long.
           </p>
         </div>
       </section>
       <section class="projects" id="projects">
         <div class="projects--container">
-          <div class="projects--title">
+          <div class="card projects--title">
             <h2>My work</h2>
             <p>
               You can visit
               <a href="https://github.com/daawascript" target="_blank"
                 >my github</a
               >
-              to see all the projects I have worked on. Following are the ones I
-              put up online. If you are interested in my problem solving skills,
-              you should check out t<a
+              to see all the projects I have worked on. If you are interested in
+              my problem solving skills, you should check out t<a
                 href="https://github.com/daawascript/exercism"
                 target="_blank"
                 >his repo</a
@@ -77,19 +77,23 @@
               in which I solve coding challenges from
               <a href="https://exercism.io/profiles/daawascript" target="_blank"
                 >exercism.io</a
-              >.
+              >. <br />
+              You can see some of my work below.
             </p>
           </div>
-          <div class="projects--item">
+          <div class="card projects--item">
             <h3>Weather app</h3>
             <div>
               <p>
                 A simple weather app built with React and Tailwind css, using
-                the open weather api. I picked those tools as React is pretty
-                neat for creating modular components while keeping the source
-                code maintanable and scalable. As for Tailwind, it is a very
-                easy way to style applications without managing complex and hard
-                to maintain stylesheets.
+                the
+                <a href="https://openweathermap.org/" target="_blank"
+                  >open weather api</a
+                >. I picked those tools as React is great at` creating modular
+                components while keeping the source code maintanable and
+                scalable. As for Tailwind, it is a very easy way to style
+                applications without managing complex and hard to maintain
+                stylesheets.
               </p>
             </div>
             <img src="./img/weather-app.webp" alt="project screenshot" />
@@ -110,19 +114,28 @@
               >
             </span>
           </div>
-          <div class="projects--item">
+          <div class="card projects--item">
             <h3>My personal website</h3>
             <img src="./img/portfolio.webp" alt="project screenshot" />
 
             <p>
-              This is the very site you are on! I picked a more traditional
-              route this time with HTML, SASS, vanilla JavaScript and Vite. HTML
-              is tried and tested and I did not feel the need for React. Sass is
-              incredibly helpful and had all the features I need for this
-              project. I picked Vite as a bundler because of the little overhead
-              it has and how fast it is, it was a real pleasure to use. I am
-              also using Animate.css for a couple animation as well as
-              TSParticles, two pretty awesome libraries!
+              This is the very site you are on and it is built with good ol'
+              HTML, Sass, JavaScript and Vite. HTML is tried and tested and I
+              did not feel the need for React. Sass is incredibly helpful with
+              mixins, nesting and much more... I picked Vite as a bundler
+              because of the little overhead it has and how fast it is, it was a
+              real pleasure to work with. I am also using
+              <a
+                href="https://github.com/animate-css/animate.css/"
+                target="_blank"
+                >Animate.css</a
+              >
+              for a couple animation as well as
+              <a
+                href="https://github.com/matteobruni/tsparticles/"
+                target="_blank"
+                >TSParticles</a
+              >, two pretty awesome libraries!
             </p>
             <span>
               <a
@@ -139,26 +152,16 @@
         </div>
       </section>
       <section class="contact" id="contact">
-        <h2>Let's chat!</h2>
-        <form class="contact--form" action="submit">
-          <div class="contact--form--item">
-            <label for="name">Your Name </label
-            ><input type="text" placeholder="Name" />
-          </div>
-          <div class="contact--form--item">
-            <label for="email">Your email </label
-            ><input type="email" placeholder="Email address" />
-          </div>
-          <div class="contact--form--item">
-            <label for="message"> Your message </label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-            ></textarea>
-          </div>
-        </form>
+        <div class="card">
+          <h2>Let's chat!</h2>
+          <p>
+            I currently am looking for opportunities and I'd love to hear from
+            you! Feel free to send me an e-mail at
+            <a href="mailto:theo.leveque@gmail.com"
+              >theo.leveque[at]gmail.com</a
+            >
+          </p>
+        </div>
       </section>
     </main>
     <script type="module" src="/main.js"></script>

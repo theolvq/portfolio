@@ -18,15 +18,26 @@
   align-items: center;
 }
 
-@mixin absolute-right {
+@mixin absolute-left {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+}
+
+// general styles
+
+.card {
+  background-color: $clear-grey;
+  padding: 2em 3em;
+  margin-bottom: 3em;
+  border-radius: 1em;
+  box-shadow: 0.175em 0.175em 1em 0.25em $shadow-grey;
+  backdrop-filter: blur(0.25em);
 }
 
 // Nav Styles
 .nav {
-  @include absolute-right;
+  @include absolute-left;
   height: 100vh;
   min-width: max-content;
 
@@ -37,7 +48,7 @@
   }
 
   &--main {
-    @include absolute-right;
+    @include absolute-left;
     visibility: hidden;
     opacity: 0;
     min-height: 100vh;
@@ -46,8 +57,10 @@
     font-size: 1.75rem;
     font-variant: small-caps;
     font-weight: 600;
-    background-color: $grey;
-    box-shadow: -0.125em 0 0.75em 0.25em $shadow-grey;
+    background-color: $clear-grey;
+    backdrop-filter: blur(0.25em);
+
+    box-shadow: 0.175em 0 0.75em 0.25em $shadow-grey;
     transition: visibility 500ms;
     &__list {
       @include flex-col;
@@ -60,7 +73,9 @@
 }
 
 .hamburger--container {
-  @include absolute-right;
+  position: fixed;
+  top: 0;
+  left: 0;
   line-height: 0;
   padding: 1em;
   border-radius: 100%;
@@ -79,7 +94,7 @@
   user-select: none;
 }
 
-// Top section styles
+// top section styles
 
 .top {
   min-height: 100vh;
@@ -109,7 +124,7 @@
 
 @media (min-width: 600px) {
   .about--container {
-    @include flex-col-center();
+    @include flex-col-center;
     gap: 2rem;
   }
 }
@@ -119,20 +134,17 @@
   text-align: center;
 }
 
-// project section styles
+// projects section styles
 .projects {
   min-height: 100vh;
 
   &--title {
     text-align: center;
+    font-size: 1.2rem;
     margin-bottom: 3em;
   }
 
   &--item {
-    background-color: $shadow-grey;
-    padding: 1em 2em;
-    margin-bottom: 3em;
-    border-radius: 1em;
     grid-column: span 2;
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -141,6 +153,8 @@
 
     h3 {
       grid-column: span 2;
+      font-weight: 600;
+      font-size: 1.5rem;
     }
 
     img {
@@ -150,6 +164,7 @@
 
     span {
       text-align: center;
+      font-size: 1.5rem;
     }
   }
 }
