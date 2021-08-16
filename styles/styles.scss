@@ -194,8 +194,27 @@
 }
 
 // contact section styles
-.contact {
+.footer {
+  position: relative;
+  bottom: 0;
+  z-index: 2;
+
   text-align: center;
   margin-top: 5rem;
+  background: $clear-grey;
+  backdrop-filter: blur(0.25em);
   @include flex-col-center;
+  .contact {
+    padding: 2rem 0;
+  }
+
+  &__links {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    img {
+      height: 2rem;
+    }
+  }
 }
