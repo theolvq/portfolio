@@ -1,4 +1,4 @@
-@import './base.scss';
+@import "./base.scss";
 
 // Mixins
 @mixin flex-col {
@@ -178,6 +178,18 @@
       font-size: 1.5rem;
       white-space: nowrap;
     }
+  }
+}
+
+.projects__container :nth-child(odd) {
+  div {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  img {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
   }
 }
 
